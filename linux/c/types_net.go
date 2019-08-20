@@ -1,0 +1,33 @@
+/*
+ * Author: fasion
+ * Created time: 2019-08-07 08:45:20
+ * Last Modified by: fasion
+ * Last Modified time: 2019-08-19 15:58:27
+ */
+
+package c
+
+/*
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+*/
+import "C"
+
+const (
+	IPPROTO_TCP = C.IPPROTO_TCP
+
+	TCP_ESTABLISHED = C.TCP_ESTABLISHED
+	TCP_SYN_SENT = C.TCP_SYN_SENT
+	TCP_SYN_RECV = C.TCP_SYN_RECV
+	TCP_FIN_WAIT1 = C.TCP_FIN_WAIT1
+	TCP_FIN_WAIT2 = C.TCP_FIN_WAIT2
+	TCP_TIME_WAIT = C.TCP_TIME_WAIT
+	TCP_CLOSE = C.TCP_CLOSE
+	TCP_CLOSE_WAIT = C.TCP_CLOSE_WAIT
+	TCP_LAST_ACK = C.TCP_LAST_ACK
+	TCP_LISTEN = C.TCP_LISTEN
+	TCP_CLOSING = C.TCP_CLOSING
+
+	//TCP_NEW_SYN_RECV = C.TCP_NEW_SYN_RECV
+	//TCP_MAX_STATES = C.TCP_MAX_STATES
+)

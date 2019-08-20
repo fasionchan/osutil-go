@@ -1,0 +1,41 @@
+// +build ignore
+
+/*
+ * Author: fasion
+ * Created time: 2019-06-28 14:20:44
+ * Last Modified by: fasion
+ * Last Modified time: 2019-07-01 09:48:32
+ */
+
+package c
+
+/*
+#include <sys/auxv.h>
+*/
+import "C"
+
+const (
+	AT_NULL = C.AT_NULL
+	AT_IGNORE = C.AT_IGNORE
+	AT_EXECFD = C.AT_EXECFD
+	AT_PHDR = C.AT_PHDR
+	AT_PHENT = C.AT_PHENT
+	AT_PHNUM = C.AT_PHNUM
+	AT_PAGESZ = C.AT_PAGESZ
+	AT_BASE = C.AT_BASE
+	AT_FLAGS = C.AT_FLAGS
+	AT_ENTRY = C.AT_ENTRY
+	AT_NOTELF = C.AT_NOTELF
+	AT_UID = C.AT_UID
+	AT_EUID = C.AT_EUID
+	AT_GID = C.AT_GID
+	AT_EGID = C.AT_EGID
+	AT_PLATFORM = C.AT_PLATFORM
+	AT_HWCAP = C.AT_HWCAP
+	AT_CLKTCK = C.AT_CLKTCK
+	AT_SECURE = C.AT_SECURE
+	AT_BASE_PLATFORM = C.AT_BASE_PLATFORM
+	AT_RANDOM = C.AT_RANDOM
+	AT_HWCAP2 = C.AT_HWCAP2
+	AT_EXECFN = C.AT_EXECFN
+)
