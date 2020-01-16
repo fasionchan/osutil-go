@@ -3,7 +3,7 @@
 # Author: fasion
 # Created time: 2019-06-28 14:11:44
 # Last Modified by: fasion
-# Last Modified time: 2019-08-07 08:50:36
+# Last Modified time: 2019-08-29 14:35:56
 
 generate() {
 	name="$1"
@@ -25,4 +25,6 @@ generate() {
 	generate "types_common"
 	generate "types_elfauxv"
 	generate "types_net"
+	generate "types_sg"
+	generate "types_scsi"
 )

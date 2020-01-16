@@ -2,7 +2,7 @@
  * Author: fasion
  * Created time: 2019-08-19 13:45:59
  * Last Modified by: fasion
- * Last Modified time: 2019-08-20 09:07:27
+ * Last Modified time: 2019-09-10 19:25:56
  */
 
 package perf
@@ -14,7 +14,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	_os "github.com/fasionchan/libgo/os"
+	"github.com/fasionchan/libgo/arch"
 )
 
 const (
@@ -81,14 +81,14 @@ func FetchTcpTable() ([]*MIB_TCPROW, error) {
 	reader := bytes.NewReader(buffer[:size])
 
 	var n uint32
-	if err := binary.Read(reader, _os.NativeEndian, &n); err != nil {
+	if err := binary.Read(reader, arch.NativeEndian, &n); err != nil {
 		return nil, err
 	}
 
 	rows := make([]*MIB_TCPROW, 0, n)
 	for ; n > 0; n-- {
 		r := new(MIB_TCPROW)
-		if err := binary.Read(reader, _os.NativeEndian, r); err != nil {
+		if err := binary.Read(reader, arch.NativeEndian, r); err != nil {
 			return nil, err
 		}
 

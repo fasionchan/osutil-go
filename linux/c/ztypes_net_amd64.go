@@ -6,8 +6,10 @@
 package c
 
 const (
-	IPPROTO_TCP	= 0x6
+	IPPROTO_TCP = 0x6
+)
 
+const (
 	TCP_ESTABLISHED	= 0x1
 	TCP_SYN_SENT	= 0x2
 	TCP_SYN_RECV	= 0x3

@@ -2,7 +2,7 @@
  * Author: fasion
  * Created time: 2019-08-06 15:41:04
  * Last Modified by: fasion
- * Last Modified time: 2019-08-20 16:36:29
+ * Last Modified time: 2019-09-10 19:21:07
  */
 
 package netlink
@@ -11,6 +11,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
+	"github.com/fasionchan/libgo/arch"
 	"github.com/fasionchan/libgo/encoding"
 )
 
@@ -78,7 +79,7 @@ func (self InetDiagReceiver) Receive() ([]*InetDiagMsg_c, bool, error) {
 		}
 
 		diag := new(InetDiagMsg_c)
-		err := encoding.UnmarshalBinary(binary.BigEndian, msg.Data, diag)
+		err := encoding.UnmarshalBinary(arch.NativeEndian, msg.Data, diag)
 		if err != nil {
 			return nil, false, err
 		}

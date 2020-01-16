@@ -2,7 +2,7 @@
  * Author: fasion
  * Created time: 2019-08-20 09:54:44
  * Last Modified by: fasion
- * Last Modified time: 2019-08-20 10:18:15
+ * Last Modified time: 2019-08-22 14:26:20
  */
 
 package wmi
@@ -23,6 +23,7 @@ type Win32_PerfRawData_PerfOS_Processor struct {
 
 func (self *Win32_PerfRawData_PerfOS_Processor) Sub(other *Win32_PerfRawData_PerfOS_Processor) (*Win32_PerfRawData_PerfOS_Processor) {
 	return &Win32_PerfRawData_PerfOS_Processor{
+		Name: self.Name,
 		PercentIdleTime: self.PercentIdleTime - other.PercentIdleTime,
 		PercentInterruptTime: self.PercentInterruptTime - other.PercentInterruptTime,
 		PercentPrivilegedTime: self.PercentPrivilegedTime - other.PercentPrivilegedTime,
