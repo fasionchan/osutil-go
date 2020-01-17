@@ -1,3 +1,5 @@
+// +build ignore
+
 /*
  * Author: fasion
  * Created time: 2019-08-07 08:45:20
