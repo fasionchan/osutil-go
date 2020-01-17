@@ -10,4 +10,4 @@ require (
 	github.com/google/uuid v1.1.1
 )
 
-replace github.com/fasionchan/libgo => /Users/fasion/workspace/github.com/fasionchan/libgo
+replace github.com/fasionchan/libgo => ../libgo
