@@ -2,7 +2,7 @@
  * Author: fasion
  * Created time: 2019-12-20 10:18:55
  * Last Modified by: fasion
- * Last Modified time: 2019-12-23 09:48:09
+ * Last Modified time: 2020-03-27 17:34:23
  */
 
 package procfs
@@ -72,6 +72,15 @@ func (fields NetTcpFields) Local() (net.IP, int, error) {
 
 func (fields NetTcpFields) Remote() (net.IP, int, error) {
 	return parseAddressPair(fields[1])
+}
+
+func (fields NetTcpFields) State() (uint8, error) {
+	state, err := strconv.ParseUint(strings.TrimSpace(fields[2]), 16, 8)
+	if err != nil {
+		return 0, err
+	}
+
+	return uint8(state), nil
 }
 
 type NetTcpScanner struct {
